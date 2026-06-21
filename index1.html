@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD Maju - Solusi Pertanian Unggul</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo.ico" type="image/x-icon" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F7FBF9; /* Very light green-grey background */
+        }
+        .carousel-item {
+            display: none;
+        }
+        .carousel-item.active {
+            display: block;
+        }
+        /* New Color Palette */
+        .bg-primary-green {
+            background-color: seagreen; /* A vibrant, standard green */
+        }
+        .text-primary-green {
+            color: #4CAF50;
+        }
+        .bg-dark-green {
+            background-color: #2E7D32; /* Darker green for contrast */
+        }
+        .text-dark-green {
+            color: #2E7D32;
+        }
+        .text-accent-gold {
+            color: #FFC107; /* Golden yellow accent */
+        }
+        .bg-light-cream {
+            background-color: #FFFDE7; /* Light cream for soft sections */
+        }
+        .btn-whatsapp {
+            background-color: #25D366; /* WhatsApp green, kept for recognition */
+            transition: background-color 0.3s ease;
+        }
+        .btn-whatsapp:hover {
+            background-color: #FFC107;
+        }
+        .shadow-custom {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        /* Header with Background Image and Overlay */
+        .header-with-bg-image {
+        background-image: url('img/udmaju.jpeg'); /* Placeholder agricultural image */
+        background-size: cover;
+        background-position: center;
+        position: relative; /* Needed for pseudo-element positioning */
+        color: white; /* Ensure text color is white for readability */
+        }
+
+        .header-with-bg-image::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.4); /* Dark semi-transparent overlay */
+        z-index: 0; /* Place overlay above background image but below content */
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header Section -->
+    <header class="header-with-bg-image text-white py-16 px-4 md:px-8 text-center rounded-b-xl shadow-custom">
+        <div class="container mx-auto max-w-4xl">
+            <!-- Headline -->
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 opacity-90">
+                Tingkatkan Panen Anda dengan Produk Pertanian Terbaik dari UD Maju
+            </h1>
+            <!-- Subheadline -->
+            <p class="text-lg md:text-xl lg:text-2xl font-light mb-8 opacity-90">
+                Pupuk dan Pestisida Berkualitas Tinggi untuk Hasil Melimpah dan Pertanian Berkelanjutan.
+            </p>
+            <!-- Call to Action in Header -->
+            <a href="https://wa.me/6281233183528?text=Halo%20UD%20Maju,%20saya%20tertarik%20dengan%20produk%20Anda."
+               class="inline-block btn-whatsapp text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+                Hubungi Kami via WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- Product Introduction Section -->
+    <section class="py-16 px-4 md:px-8 bg-white rounded-xl shadow-md mx-auto mt-8 max-w-6xl">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-dark-green">Produk Unggulan Kami</h2>
+            <p class="text-lg text-gray-700 leading-relaxed text-center max-w-3xl mx-auto">
+                UD Maju menyediakan beragam solusi pertanian lengkap, mulai dari pupuk bersubsidi dan non-subsidi, hingga obat-obatan dan alat pertanian modern. Kami berkomitmen untuk menyediakan produk berkualitas tinggi yang telah teruji efektivitasnya untuk mendukung kesuksesan panen Anda.
+            </p>
+            <div class="flex flex-wrap justify-center gap-6 mt-10">
+                <div class="bg-light-cream p-6 rounded-lg shadow-sm flex-1 min-w-[280px] max-w-sm border-b-4 border-primary-green">
+                    <h3 class="text-xl font-semibold mb-3 text-dark-green">Pupuk Berkualitas</h3>
+                    <p class="text-gray-600">Menyediakan pupuk bersubsidi dan non-subsidi untuk nutrisi tanaman optimal.</p>
+                </div>
+                <div class="bg-light-cream p-6 rounded-lg shadow-sm flex-1 min-w-[280px] max-w-sm border-b-4 border-primary-green">
+                    <h3 class="text-xl font-semibold mb-3 text-dark-green">Obat & Pestisida</h3>
+                    <p class="text-gray-600">Solusi efektif untuk pengendalian hama dan penyakit tanaman.</p>
+                </div>
+                <div class="bg-light-cream p-6 rounded-lg shadow-sm flex-1 min-w-[280px] max-w-sm border-b-4 border-primary-green">
+                    <h3 class="text-xl font-semibold mb-3 text-dark-green">Alat Pertanian</h3>
+                    <p class="text-gray-600">Berbagai alat pertanian modern untuk efisiensi kerja di lahan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="py-16 px-4 md:px-8 bg-gray-50 rounded-xl shadow-md mx-auto mt-8 max-w-6xl">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-dark-green">Produk Pilihan Kami</h2>
+
+            <div class="relative w-full max-w-3xl mx-auto bg-white p-6 rounded-xl shadow-lg">
+                <!-- Carousel Items -->
+                 <div class="carousel-item active text-center">
+                    <img src="img/Pupuk Subsidi.jpg" alt="Pupuk Organik Subur Makmur" class="mx-auto w-full md:w-3/4 rounded-lg mb-6 shadow-md">
+                    <h3 class="text-2xl font-semibold text-dark-green mb-2">Pupuk Bersubsidi</h3>
+                    <p class="text-gray-700 mb-4">Pupuk Bersubsidi adalah pupuk yang pengadaannya dan penyalurannya didukung oleh pemerintah dalam bentuk subsidi</p>
+                    <ul class="list-disc list-inside text-gray-600 text-left inline-block">
+                        <li>Membantu petani memperoleh pupuk dengan harga terjangkau untuk meningkatkan hasil pertanian, mendukung ketahanan pangan, dan mengurangi ketergantungan impor</li>
+                        <li>Pupuk subsidi disalurkan kepada petani yang terdaftar dalam e-RDKK dan biasanya melalui kios resmi dengan menunjukkan KTP atau kartu tani. </li>
+                        <li>Pupuk subsidi yang diberikan meliputi urea, NPK, dan organik.</li>
+                    </ul>
+                </div>
+
+                <div class="carousel-item active text-center">
+                    <img src="img/Non Subsidi.jpg" alt="Pupuk Organik Subur Makmur" class="mx-auto w-full md:w-3/4 rounded-lg mb-6 shadow-md">
+                    <h3 class="text-2xl font-semibold text-dark-green mb-2">Pupuk Non Subsidi"</h3>
+                    <p class="text-gray-700 mb-4">Pupuk Non Subsidi adalah pupuk yang dijual tanpa subsidi pemerintah, dan biasanya memiliki harga yang lebih tinggi dibandingkan pupuk subsidi</p>
+                    <ul class="list-disc list-inside text-gray-600 text-left inline-block">
+                        <li>Pupuk subsidi dijual dengan harga lebih murah karena mendapat subsidi dari pemerintah, sedangkan pupuk non subsidi dijual dengan harga pasar yang lebih tinggi. </li>
+                        <li>Pupuk subsidi seringkali memiliki ketersediaan terbatas dan terkadang sulit didapatkan, sementara pupuk non subsidi lebih mudah ditemukan di pasaran. </li>
+                        <li>Pupuk subsidi umumnya memiliki jenis yang lebih terbatas, sementara pupuk non subsidi menawarkan berbagai pilihan jenis dan formula untuk memenuhi kebutuhan tanaman yang berbeda. </li>
+                    </ul>
+                </div>
+
+                <div class="carousel-item text-center">
+                    <img src="img/obat-obatan.jpg" alt="Pestisida Anti Hama Super" class="mx-auto w-full md:w-3/4 rounded-lg mb-6 shadow-md">
+                    <h3 class="text-2xl font-semibold text-dark-green mb-2">Pestisida "Anti Hama Super"</h3>
+                    <p class="text-gray-700 mb-4">Pestisida ampuh dengan formula khusus untuk membasmi hama pengganggu tanaman secara cepat dan efektif. Lindungi tanaman Anda dari serangan hama.</p>
+                    <ul class="list-disc list-inside text-gray-600 text-left inline-block">
+                        <li>Efektif membasmi berbagai jenis hama.</li>
+                        <li>Melindungi tanaman dari kerusakan.</li>
+                        <li>Mudah diaplikasikan dengan hasil maksimal.</li>
+                    </ul>
+                </div>
+
+                <div class="carousel-item text-center">
+                    <img src="img/bibit padi dan jagung.jpg" alt="Alat Semprot Praktis Tani" class="mx-auto w-full md:w-3/4 rounded-lg mb-6 shadow-md">
+                    <h3 class="text-2xl font-semibold text-dark-green mb-2">Bibit Pertanian</h3>
+                    <p class="text-gray-700 mb-4">Benih/biji yang telah disemai sebelumnya yang akan ditanam ke lahan/media tanam dan memenuhi persyaratan dalam budidaya tanaman</p>
+                    <ul class="list-disc list-inside text-gray-600 text-left inline-block">
+                        <li>Bibit unggul memiliki ketahanan terhadap berbagai jenis hama dan penyakit yang umum menyerang tanaman sejenisnya. </li>
+                        <li>Bibit unggul dirancang untuk menghasilkan buah atau hasil panen yang lebih banyak dibandingkan bibit biasa. </li>
+                        <li>Bibit unggul memiliki kualitas yang baik, baik dari segi fisik maupun genetik, yang dapat menghasilkan tanaman yang sehat dan kuat. </li>
+                    </ul>
+                </div>
+
+                <div class="carousel-item text-center">
+                    <img src="img/semprot.jpg" alt="Alat Semprot Praktis Tani" class="mx-auto w-full md:w-3/4 rounded-lg mb-6 shadow-md">
+                    <h3 class="text-2xl font-semibold text-dark-green mb-2">Alat Semprot "Praktis Tani"</h3>
+                    <p class="text-gray-700 mb-4">Alat semprot ergonomis dan efisien untuk aplikasi pupuk cair atau pestisida. Ringan, mudah digunakan, dan tahan lama untuk kebutuhan pertanian Anda.</p>
+                    <ul class="list-disc list-inside text-gray-600 text-left inline-block">
+                        <li>Desain ergonomis, nyaman digunakan.</li>
+                        <li>Penyemprotan merata dan efisien.</li>
+                        <li>Material berkualitas, awet dan tahan lama.</li>
+                    </ul>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button id="prevBtn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-primary-green text-white p-3 rounded-full shadow-lg hover:bg-dark-green transition">
+                    &#10094;
+                </button>
+                <button id="nextBtn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-primary-green text-white p-3 rounded-full shadow-lg hover:bg-dark-green transition">
+                    &#10095;
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-16 px-4 md:px-8 bg-dark-green text-white text-center rounded-xl shadow-lg mx-auto mt-8 max-w-6xl">
+        <div class="container mx-auto max-w-3xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Siap Meningkatkan Hasil Panen Anda?</h2>
+            <p class="text-lg md:text-xl mb-8 opacity-90">
+                Jangan ragu untuk bertanya atau melakukan pemesanan. Kami siap membantu Anda mencapai pertanian yang lebih maju dan produktif.
+            </p>
+            <a href="https://wa.me/6281233183528?text=Halo%20UD%20Maju,%20saya%20tertarik%20dengan%20produk%20Anda."
+               class="inline-block btn-whatsapp text-white font-bold py-4 px-10 rounded-full text-xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition duration-300">
+                Hubungi Kami Sekarang via WhatsApp!
+            </a>
+        </div>
+    </section>
+
+    <!-- Maps Section -->
+    <section class="py-16 px-4 md:px-8 bg-white rounded-xl shadow-md mx-auto mt-8 max-w-6xl">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-dark-green">Lokasi Kios Kami</h2>
+            <p class="text-lg text-gray-700 text-center mb-6 max-w-3xl mx-auto">
+                Kunjungi kios UD Maju untuk mendapatkan produk pertanian terbaik dan konsultasi langsung dengan tim kami.
+            </p>
+            <div class="aspect-w-16 aspect-h-9 w-full rounded-lg overflow-hidden shadow-lg border-2 border-primary-green">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.070624838608!2d111.84833217497645!3d-7.142248092795899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7778af4aaad48d%3A0x2d7588a93da5ab2d!2sUD.+Maju!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid"
+                    width="100%"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="rounded-lg"
+                ></iframe>
+            </div>
+            <!-- <p class="text-center text-gray-600 mt-4">
+                Desa Mori RT 07 RW 02, Trucuk, Bojonegoro
+            </p> -->
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="py-16 px-4 md:px-8 bg-light-cream rounded-xl shadow-md mx-auto mt-8 max-w-6xl">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-dark-green">Informasi Kontak</h2>
+            <p class="text-lg text-gray-700 mb-6 max-w-3xl mx-auto">
+                Kami siap melayani Anda. Jangan ragu untuk menghubungi kami untuk pertanyaan, konsultasi, atau pemesanan produk.
+            </p>
+            <div class="flex flex-wrap justify-center gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center min-w-[250px] max-w-xs flex-1 border-b-4 border-accent-gold">
+                    <svg class="w-12 h-12 text-primary-green mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    <h3 class="text-xl font-semibold mb-2 text-dark-green">Telepon/WhatsApp</h3>
+                    <p class="text-gray-700 font-medium">+62 812-3318-3528</p>
+                    <a href="https://wa.me/6281233183528?text=Halo%20UD%20Maju,%20saya%20tertarik%20dengan%20produk%20Anda." class="text-primary-green hover:underline mt-2">Kirim Pesan</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center min-w-[250px] max-w-xs flex-1 border-b-4 border-accent-gold">
+                    <svg class="w-12 h-12 text-primary-green mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <h3 class="text-xl font-semibold mb-2 text-dark-green">Email</h3>
+                    <p class="text-gray-700 font-medium">udmajumori@gmail.com</p>
+                    <a href="mailto:info@udmaju.com" class="text-primary-green hover:underline mt-2">Kirim Email</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center min-w-[250px] max-w-xs flex-1 border-b-4 border-accent-gold">
+                    <svg class="w-12 h-12 text-primary-green mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <h3 class="text-xl font-semibold mb-2 text-dark-green">Alamat</h3>
+                    <p class="text-gray-700 text-center">Desa Mori RT 07 RW 02, Trucuk, Bojonegoro</p>
+                    <a href="https://maps.app.goo.gl/V4M9MUDyiMo7hXDs5" target="_blank" class="text-primary-green hover:underline mt-2">Lihat di Peta</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8 px-4 md:px-8 mt-8 rounded-t-xl">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 UD Maju. Semua Hak Dilindungi.</p>
+            <p class="text-sm mt-2">Solusi Pertanian Unggul untuk Masa Depan yang Lebih Baik.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Carousel functionality
+        let currentSlide = 0;
+        const items = document.querySelectorAll('.carousel-item');
+        const totalSlides = items.length;
+
+        function showSlide(index) {
+            items.forEach((item, i) => {
+                item.classList.remove('active');
+                if (i === index) {
+                    item.classList.add('active');
+                }
+            });
+        }
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        });
+
+        // Initial display
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
